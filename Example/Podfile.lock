@@ -1,13 +1,7 @@
 PODS:
-  - FBSnapshotTestCase (2.1.1):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
-  - FBSnapshotTestCase/Core (2.1.1)
-  - FBSnapshotTestCase/SwiftSupport (2.1.1):
-    - FBSnapshotTestCase/Core
   - HYDispatchQueuePool (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - HYDispatchQueuePool (from `../`)
 
 EXTERNAL SOURCES:
@@ -15,7 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
   HYDispatchQueuePool: 2452a657172e36ef22ca91226fd5dd7edcf3f514
 
 COCOAPODS: 0.39.0

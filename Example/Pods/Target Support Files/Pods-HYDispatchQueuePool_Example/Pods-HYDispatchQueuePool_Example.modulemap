@@ -1,6 +1,0 @@
-framework module Pods_HYDispatchQueuePool_Example {
-  umbrella header "Pods-HYDispatchQueuePool_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

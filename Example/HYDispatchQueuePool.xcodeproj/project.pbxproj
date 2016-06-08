@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01733F405A869F90FD5962D6 /* libPods-HYDispatchQueuePool_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9AB69B8CA9909F4630D842 /* libPods-HYDispatchQueuePool_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		738F794D4FA2EAC636B915B3 /* Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE7B500E0008F33A87A2614 /* Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		BEC790BF9E038E730575244B /* Pods_HYDispatchQueuePool_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67C23A7F42CB0C1211A03F1 /* Pods_HYDispatchQueuePool_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +62,9 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D53395C5720DB3CB5983FC06 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DCF4CDDCC3532321E597A888 /* Pods-HYDispatchQueuePool_Example-HYDispatchQueuePool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYDispatchQueuePool_Example-HYDispatchQueuePool_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYDispatchQueuePool_Example-HYDispatchQueuePool_Tests/Pods-HYDispatchQueuePool_Example-HYDispatchQueuePool_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E67C23A7F42CB0C1211A03F1 /* Pods_HYDispatchQueuePool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYDispatchQueuePool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C0703C38B8B78047537620 /* Pods-HYDispatchQueuePool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYDispatchQueuePool_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYDispatchQueuePool_Example/Pods-HYDispatchQueuePool_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F75DBB3853ED511157A10EE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FC9AB69B8CA9909F4630D842 /* libPods-HYDispatchQueuePool_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYDispatchQueuePool_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				BEC790BF9E038E730575244B /* Pods_HYDispatchQueuePool_Example.framework in Frameworks */,
+				01733F405A869F90FD5962D6 /* libPods-HYDispatchQueuePool_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +132,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				E67C23A7F42CB0C1211A03F1 /* Pods_HYDispatchQueuePool_Example.framework */,
 				6FE7B500E0008F33A87A2614 /* Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests.framework */,
+				FC9AB69B8CA9909F4630D842 /* libPods-HYDispatchQueuePool_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

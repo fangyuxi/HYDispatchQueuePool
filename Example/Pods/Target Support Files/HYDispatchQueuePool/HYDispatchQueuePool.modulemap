@@ -1,6 +1,0 @@
-framework module HYDispatchQueuePool {
-  umbrella header "HYDispatchQueuePool-umbrella.h"
-
-  export *
-  module * { export * }
-}
