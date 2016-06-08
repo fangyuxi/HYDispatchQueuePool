@@ -4,7 +4,6 @@ target 'HYDispatchQueuePool_Example' do
   pod 'HYDispatchQueuePool', :path => '../'
 
   target 'HYDispatchQueuePool_Tests' do
-    inherit! :search_paths
 
     pod 'FBSnapshotTestCase'
   end

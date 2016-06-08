@@ -1,0 +1,6 @@
+framework module Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests {
+  umbrella header "Pods-HYDispatchQueuePool_Example-HYDispatchQueuePool_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

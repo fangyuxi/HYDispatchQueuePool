@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests : NSObject
+@end
+@implementation PodsDummy_Pods_HYDispatchQueuePool_Example_HYDispatchQueuePool_Tests
+@end
