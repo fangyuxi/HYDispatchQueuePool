@@ -16,10 +16,6 @@
 
 @interface HYDispatchQueuePool : NSObject
 
-@property (nonatomic, copy, readonly) NSString *name;
-
-- (instancetype)initWithName:(NSString *)name;
-
 /**
 *  Get A Serial Queue
 *
@@ -32,6 +28,6 @@
 *  @return
 */
 
-- (dispatch_queue_t) queueWithPriority:(NSInteger)priority;
++ (dispatch_queue_t) queueWithPriority:(NSInteger)priority;
 
 @end
