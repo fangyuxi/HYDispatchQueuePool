@@ -7,66 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ED9C1D01D081836004D7DC0 /* HYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9C1CF1D081836004D7DC0 /* HYDispatchQueuePool.m */; };
-		430C7DC36CE1A94274EC7A684C33C3BE /* Pods-HYDispatchQueuePool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC87F10B240E3EDA68F1D08F3098D203 /* Pods-HYDispatchQueuePool_Example-dummy.m */; };
-		C5B370C6A7484A1527AEF7957EDF1C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		18C7B336C9C442D14558C84E78F39A34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2B53ED9672DDC5F89415ECAED853F5D4 /* HYDispatchQueuePool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB2E04BBD7EBAFA74AB697D4E95F458 /* HYDispatchQueuePool-dummy.m */; };
+		7C62CD68EAFB1D17537FBE8B4B0BE204 /* HYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C5395531753A6BBD3EAD4A326363FB /* HYDispatchQueuePool.m */; };
+		9337AD1BA794FE8C4D98C5FD447F3BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		EA0E185AC73CED04FD2522266145C467 /* HYDispatchQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7FEDEB3833F9D054BF3E0666C967D5 /* HYDispatchQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCD5F73B3854A6EAAF0201029B1DF3EA /* Pods-HYDispatchQueuePool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC87F10B240E3EDA68F1D08F3098D203 /* Pods-HYDispatchQueuePool_Example-dummy.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC72C2F961CC735C1E22BB3A581DB79D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B23B63A7E9E4D0C639CFC8094E1CF1D;
+			remoteInfo = HYDispatchQueuePool;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0282A9C21C7E5E67593E920C4E896097 /* Pods-HYDispatchQueuePool_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HYDispatchQueuePool_Example-resources.sh"; sourceTree = "<group>"; };
-		12721EC69E1F0338B9CC21A43321BA58 /* libPods-HYDispatchQueuePool_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYDispatchQueuePool_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ED9C1CB1D081836004D7DC0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		1ED9C1CE1D081836004D7DC0 /* HYDispatchQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDispatchQueuePool.h; sourceTree = "<group>"; };
-		1ED9C1CF1D081836004D7DC0 /* HYDispatchQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDispatchQueuePool.m; sourceTree = "<group>"; };
+		1CB31F6F308328DFCEB621DD3DDD5EEE /* HYDispatchQueuePool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HYDispatchQueuePool-prefix.pch"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E73F1C7BC0E5FBFF3919CD86C2FD113 /* HYDispatchQueuePool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HYDispatchQueuePool.xcconfig; sourceTree = "<group>"; };
+		6279764F803EAF4088C8B3A3647EB901 /* libPods-HYDispatchQueuePool_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYDispatchQueuePool_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A7D594ACACE0BCE9693FA77C757B17 /* Pods-HYDispatchQueuePool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HYDispatchQueuePool_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CBE2EC97EBE647CB298384515B0DE355 /* Pods-HYDispatchQueuePool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HYDispatchQueuePool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CC6DBD5451530288E6906C70E21E8144 /* libHYDispatchQueuePool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHYDispatchQueuePool.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C5395531753A6BBD3EAD4A326363FB /* HYDispatchQueuePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HYDispatchQueuePool.m; sourceTree = "<group>"; };
 		D3F13686A786E056582315EE851B92BC /* Pods-HYDispatchQueuePool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HYDispatchQueuePool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E6D35975D98449645457AB07989F3278 /* Pods-HYDispatchQueuePool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HYDispatchQueuePool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EA7FEDEB3833F9D054BF3E0666C967D5 /* HYDispatchQueuePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HYDispatchQueuePool.h; sourceTree = "<group>"; };
 		EC87F10B240E3EDA68F1D08F3098D203 /* Pods-HYDispatchQueuePool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HYDispatchQueuePool_Example-dummy.m"; sourceTree = "<group>"; };
 		F4270123BA28BE8ACD8A1350A92BBB54 /* Pods-HYDispatchQueuePool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HYDispatchQueuePool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FAB2E04BBD7EBAFA74AB697D4E95F458 /* HYDispatchQueuePool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HYDispatchQueuePool-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5F9FB0FA6E0692D87E6C37152C74A39A /* Frameworks */ = {
+		519C5E72A730D492A281761D71209D1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B370C6A7484A1527AEF7957EDF1C61 /* Foundation.framework in Frameworks */,
+				9337AD1BA794FE8C4D98C5FD447F3BC4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3699C96BB41232AA30B61B80C76FF09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C7B336C9C442D14558C84E78F39A34 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1ED9C1CA1D081836004D7DC0 /* Assets */ = {
+		28925E0A0513056D45477142202471AE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1ED9C1CB1D081836004D7DC0 /* .gitkeep */,
+				4E73F1C7BC0E5FBFF3919CD86C2FD113 /* HYDispatchQueuePool.xcconfig */,
+				FAB2E04BBD7EBAFA74AB697D4E95F458 /* HYDispatchQueuePool-dummy.m */,
+				1CB31F6F308328DFCEB621DD3DDD5EEE /* HYDispatchQueuePool-prefix.pch */,
 			);
-			name = Assets;
-			path = HYDispatchQueuePool/Assets;
-			sourceTree = "<group>";
-		};
-		1ED9C1CC1D081836004D7DC0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1ED9C1CE1D081836004D7DC0 /* HYDispatchQueuePool.h */,
-				1ED9C1CF1D081836004D7DC0 /* HYDispatchQueuePool.m */,
-			);
-			name = Classes;
-			path = HYDispatchQueuePool/Classes;
-			sourceTree = "<group>";
-		};
-		283CBF791A60FEC2B6070291975D4EC9 /* HYDispatchQueuePool */ = {
-			isa = PBXGroup;
-			children = (
-				1ED9C1CA1D081836004D7DC0 /* Assets */,
-				1ED9C1CC1D081836004D7DC0 /* Classes */,
-			);
-			name = HYDispatchQueuePool;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HYDispatchQueuePool";
 			sourceTree = "<group>";
 		};
 		6EBD5C9B89F688ADDC9CBEE145CB2A4D /* Pods-HYDispatchQueuePool_Example */ = {
@@ -84,31 +90,24 @@
 			path = "Target Support Files/Pods-HYDispatchQueuePool_Example";
 			sourceTree = "<group>";
 		};
-		771D9885560AD78625959111F973FD6D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				12721EC69E1F0338B9CC21A43321BA58 /* libPods-HYDispatchQueuePool_Example.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				B52089568816258C8AF78F104046193C /* Development Pods */,
+				CBA9F2739A8011596E3E83D197EFAE39 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				771D9885560AD78625959111F973FD6D /* Products */,
+				D8AC310F1DBE46959D758D0E32AAAA8A /* Products */,
 				F80FFA962441985FEC58CB0D8A810639 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B52089568816258C8AF78F104046193C /* Development Pods */ = {
+		B481AF27ECF63EDAC0F16270FBA74CF0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				283CBF791A60FEC2B6070291975D4EC9 /* HYDispatchQueuePool */,
+				EA7FEDEB3833F9D054BF3E0666C967D5 /* HYDispatchQueuePool.h */,
+				D1C5395531753A6BBD3EAD4A326363FB /* HYDispatchQueuePool.m */,
 			);
-			name = "Development Pods";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -127,6 +126,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CBA9F2739A8011596E3E83D197EFAE39 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E844F9D7458210BF614960D33D8FB /* HYDispatchQueuePool */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D8AC310F1DBE46959D758D0E32AAAA8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DBD5451530288E6906C70E21E8144 /* libHYDispatchQueuePool.a */,
+				6279764F803EAF4088C8B3A3647EB901 /* libPods-HYDispatchQueuePool_Example.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F80FFA962441985FEC58CB0D8A810639 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,23 +151,70 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		FA0E844F9D7458210BF614960D33D8FB /* HYDispatchQueuePool */ = {
+			isa = PBXGroup;
+			children = (
+				FCF38BB2B162AC739B5750DCC0EBA20D /* HYDispatchQueuePool */,
+				28925E0A0513056D45477142202471AE /* Support Files */,
+			);
+			name = HYDispatchQueuePool;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FCF38BB2B162AC739B5750DCC0EBA20D /* HYDispatchQueuePool */ = {
+			isa = PBXGroup;
+			children = (
+				B481AF27ECF63EDAC0F16270FBA74CF0 /* Classes */,
+			);
+			path = HYDispatchQueuePool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2CAFFF3926B1EA4AE2F08EB7A3E06590 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0E185AC73CED04FD2522266145C467 /* HYDispatchQueuePool.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3908A84CDA0780196CBCE85C525E653B /* Pods-HYDispatchQueuePool_Example */ = {
+		0B23B63A7E9E4D0C639CFC8094E1CF1D /* HYDispatchQueuePool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 853517C828068518F290793884370FB6 /* Build configuration list for PBXNativeTarget "Pods-HYDispatchQueuePool_Example" */;
+			buildConfigurationList = 08BD19BB85D0BBF47A738F2DBC6AF34C /* Build configuration list for PBXNativeTarget "HYDispatchQueuePool" */;
 			buildPhases = (
-				0B26529731E8AF1C41E740BBC76BC33E /* Sources */,
-				5F9FB0FA6E0692D87E6C37152C74A39A /* Frameworks */,
+				B1C98550FA3712E9BDE8200D42B72189 /* Sources */,
+				519C5E72A730D492A281761D71209D1C /* Frameworks */,
+				2CAFFF3926B1EA4AE2F08EB7A3E06590 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = HYDispatchQueuePool;
+			productName = HYDispatchQueuePool;
+			productReference = CC6DBD5451530288E6906C70E21E8144 /* libHYDispatchQueuePool.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9863F50B11DAFACCA6FFE5142A20EBB4 /* Pods-HYDispatchQueuePool_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CDEC8A88E8DBC8B3D6AE2D06E26FAEA /* Build configuration list for PBXNativeTarget "Pods-HYDispatchQueuePool_Example" */;
+			buildPhases = (
+				04467877BA7C5AB223B60BAC0E9B18B6 /* Sources */,
+				C3699C96BB41232AA30B61B80C76FF09 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D9BCCAB0C5723636B636E1120A71CEC /* PBXTargetDependency */,
+			);
 			name = "Pods-HYDispatchQueuePool_Example";
 			productName = "Pods-HYDispatchQueuePool_Example";
-			productReference = 12721EC69E1F0338B9CC21A43321BA58 /* libPods-HYDispatchQueuePool_Example.a */;
+			productReference = 6279764F803EAF4088C8B3A3647EB901 /* libPods-HYDispatchQueuePool_Example.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -171,26 +234,44 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 771D9885560AD78625959111F973FD6D /* Products */;
+			productRefGroup = D8AC310F1DBE46959D758D0E32AAAA8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3908A84CDA0780196CBCE85C525E653B /* Pods-HYDispatchQueuePool_Example */,
+				0B23B63A7E9E4D0C639CFC8094E1CF1D /* HYDispatchQueuePool */,
+				9863F50B11DAFACCA6FFE5142A20EBB4 /* Pods-HYDispatchQueuePool_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B26529731E8AF1C41E740BBC76BC33E /* Sources */ = {
+		04467877BA7C5AB223B60BAC0E9B18B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED9C1D01D081836004D7DC0 /* HYDispatchQueuePool.m in Sources */,
-				430C7DC36CE1A94274EC7A684C33C3BE /* Pods-HYDispatchQueuePool_Example-dummy.m in Sources */,
+				FCD5F73B3854A6EAAF0201029B1DF3EA /* Pods-HYDispatchQueuePool_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1C98550FA3712E9BDE8200D42B72189 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B53ED9672DDC5F89415ECAED853F5D4 /* HYDispatchQueuePool-dummy.m in Sources */,
+				7C62CD68EAFB1D17537FBE8B4B0BE204 /* HYDispatchQueuePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D9BCCAB0C5723636B636E1120A71CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HYDispatchQueuePool;
+			target = 0B23B63A7E9E4D0C639CFC8094E1CF1D /* HYDispatchQueuePool */;
+			targetProxy = EC72C2F961CC735C1E22BB3A581DB79D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
@@ -226,6 +307,58 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		12C67E5E9A9CE6265E07A9D74CFC454A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D35975D98449645457AB07989F3278 /* Pods-HYDispatchQueuePool_Example.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2F32F7FDFF9DD1F48C2D49DD4CDAEFFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E73F1C7BC0E5FBFF3919CD86C2FD113 /* HYDispatchQueuePool.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HYDispatchQueuePool/HYDispatchQueuePool-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2F4298E1A7A753A9453BE7936CCB4FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE2EC97EBE647CB298384515B0DE355 /* Pods-HYDispatchQueuePool_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -266,35 +399,19 @@
 			};
 			name = Debug;
 		};
-		64ABB5B463B317745D2ADFDCAB13294E /* Debug */ = {
+		DA5121258B4E618F14F991044CB99FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBE2EC97EBE647CB298384515B0DE355 /* Pods-HYDispatchQueuePool_Example.debug.xcconfig */;
+			baseConfigurationReference = 4E73F1C7BC0E5FBFF3919CD86C2FD113 /* HYDispatchQueuePool.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HYDispatchQueuePool/HYDispatchQueuePool-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BABF9770826E95C762D04AA196AF1130 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6D35975D98449645457AB07989F3278 /* Pods-HYDispatchQueuePool_Example.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -303,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08BD19BB85D0BBF47A738F2DBC6AF34C /* Build configuration list for PBXNativeTarget "HYDispatchQueuePool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F32F7FDFF9DD1F48C2D49DD4CDAEFFC /* Debug */,
+				DA5121258B4E618F14F991044CB99FF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -312,11 +438,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		853517C828068518F290793884370FB6 /* Build configuration list for PBXNativeTarget "Pods-HYDispatchQueuePool_Example" */ = {
+		8CDEC8A88E8DBC8B3D6AE2D06E26FAEA /* Build configuration list for PBXNativeTarget "Pods-HYDispatchQueuePool_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				64ABB5B463B317745D2ADFDCAB13294E /* Debug */,
-				BABF9770826E95C762D04AA196AF1130 /* Release */,
+				2F4298E1A7A753A9453BE7936CCB4FDD /* Debug */,
+				12C67E5E9A9CE6265E07A9D74CFC454A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

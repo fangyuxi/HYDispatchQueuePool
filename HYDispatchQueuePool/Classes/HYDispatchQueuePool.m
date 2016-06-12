@@ -7,6 +7,22 @@
 //
 
 #import "HYDispatchQueuePool.h"
+#import <libkern/OSAtomic.h>
+
+static OSSpinLock mutexLock;
+
+#pragma mark lock
+
+static inline void lock()
+{
+    OSSpinLockLock(&mutexLock);
+}
+
+static inline void unLock()
+{
+    OSSpinLockUnlock(&mutexLock);
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 #pragma mark linked map used for store queue
@@ -24,11 +40,31 @@
     __unsafe_unretained _HYQueueItem *nextItem;
 }
 
+- (instancetype)initWithPriority:(NSInteger)priority;
 
 @end
 
 @implementation _HYQueueItem
 
+- (instancetype)initWithPriority:(NSInteger)priority
+{
+    self = [super init];
+    if (self)
+    {
+        
+        createDate = [NSDate date];
+        lastAccessDate = createDate;
+        NSString *name = [NSString stringWithFormat:@"com.HYDispatchQueuePool.%@", createDate];
+        key = name;
+        queue = dispatch_queue_create([name UTF8String], DISPATCH_QUEUE_SERIAL);
+        dispatch_set_target_queue(queue, dispatch_get_global_queue(priority, 0));
+        preItem = nil;
+        nextItem = nil;
+        
+        return self;
+    }
+    return nil;
+}
 @end
 
 @interface _HYQueueItemLinkMap : NSObject //not thread-safe
@@ -37,6 +73,8 @@
     __unsafe_unretained _HYQueueItem *_head;
     __unsafe_unretained _HYQueueItem *_tail;
     __unsafe_unretained _HYQueueItem *_current;
+    
+    NSUInteger _queueCount;
     
     CFMutableDictionaryRef _itemsDic;
 }
@@ -66,6 +104,7 @@
         _head = nil;
         _tail = nil;
         _current = nil;
+        _queueCount = 0;
         
         return self;
     }
@@ -88,6 +127,10 @@
         _tail = item;
         _head = _tail;
     }
+    
+    _queueCount += 1;
+    
+    _current = _head;
 }
 
 - (void)_bringItemToHead:(_HYQueueItem *)item
@@ -109,6 +152,8 @@
     item->preItem = nil;
     _head->preItem = item;
     _head = item;
+    
+    _current = _head;
 }
 
 - (void)_removeItem:(_HYQueueItem *)item
@@ -124,6 +169,9 @@
         _tail = item->preItem;
     
     CFDictionaryRemoveValue(_itemsDic, (__bridge const void *)item->key);
+    
+    _queueCount -= 1;
+    _current = _head;
 }
 
 - (_HYQueueItem *)_removeTailItem
@@ -140,6 +188,10 @@
     }
     
     CFDictionaryRemoveValue(_itemsDic, (__bridge const void *)_tail->key);
+    
+    _queueCount -= 1;
+    _current = _head;
+    
     return item;
 }
 
@@ -148,11 +200,24 @@
     _head = nil;
     _tail = nil;
     CFDictionaryRemoveAllValues(_itemsDic);
+    
+    _queueCount = 0;
 }
 
 - (dispatch_queue_t) getQueue
 {
-    return nil;
+    lock();
+    
+    _HYQueueItem *item = _current;
+    _HYQueueItem *newOne = item->nextItem;
+    if (!newOne)
+    {
+        _current = _head;
+        item = _current;
+    }
+    
+    unLock();
+    return item->queue;
 }
 
 @end
@@ -173,12 +238,12 @@
 
 #pragma mark make a queue pool
 
-- (instancetype)initWithName:(NSString *)name
+- (instancetype)init
 {
     self = [super init];
     if (self)
     {
-        
+        mutexLock = OS_SPINLOCK_INIT;
     }
     return self;
 }
@@ -223,34 +288,58 @@
 
 - (_HYQueueItemLinkMap *)highQueuePools
 {
+    lock();
     if (!_highQueuePools) {
         _highQueuePools = [[_HYQueueItemLinkMap alloc] init];
+        
+        NSUInteger activityProcesserCount = [[NSProcessInfo processInfo] activeProcessorCount];
+        for (NSUInteger index = 0; index < activityProcesserCount; ++index) {
+            
+            _HYQueueItem *item = [[_HYQueueItem alloc] initWithPriority:DISPATCH_QUEUE_PRIORITY_HIGH];
+            [_highQueuePools _insertItemAtHead:item];
+        }
     }
+    unLock();
+    
     return _highQueuePools;
 }
 
 - (_HYQueueItemLinkMap *)defaultQueuePools
 {
-    if (!_highQueuePools) {
-        _highQueuePools = [[_HYQueueItemLinkMap alloc] init];
+    lock();
+    if (!_defaultQueuePools) {
+        _defaultQueuePools = [[_HYQueueItemLinkMap alloc] init];
+        
+        NSUInteger activityProcesserCount = [[NSProcessInfo processInfo] activeProcessorCount];
+        for (NSUInteger index = 0; index < activityProcesserCount; ++index) {
+            
+            _HYQueueItem *item = [[_HYQueueItem alloc] initWithPriority:DISPATCH_QUEUE_PRIORITY_DEFAULT];
+            [_defaultQueuePools _insertItemAtHead:item];
+        }
+        
     }
-    return _highQueuePools;
+    unLock();
+    return _defaultQueuePools;
 }
 
 - (_HYQueueItemLinkMap *)lowQueuePools
 {
-    if (!_highQueuePools) {
-        _highQueuePools = [[_HYQueueItemLinkMap alloc] init];
+    lock();
+    if (!_lowQueuePools) {
+        _lowQueuePools = [[_HYQueueItemLinkMap alloc] init];
     }
-    return _highQueuePools;
+    unLock();
+    return _lowQueuePools;
 }
 
 - (_HYQueueItemLinkMap *)backgroundQueuePools
 {
-    if (!_highQueuePools) {
-        _highQueuePools = [[_HYQueueItemLinkMap alloc] init];
+    lock();
+    if (!_backgroundQueuePools) {
+        _backgroundQueuePools = [[_HYQueueItemLinkMap alloc] init];
     }
-    return _highQueuePools;
+    unLock();
+    return _backgroundQueuePools;
 }
 
 @end

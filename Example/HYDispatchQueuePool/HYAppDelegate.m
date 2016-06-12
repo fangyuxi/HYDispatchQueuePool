@@ -7,12 +7,22 @@
 //
 
 #import "HYAppDelegate.h"
+#import "HYViewController.h"
 
 @implementation HYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    
+    HYViewController *controller = [[HYViewController alloc] init];
+    controller.title = @"HYCache Demo & BenckMark";
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    window.rootViewController = nav;
+    
+    [window makeKeyAndVisible];
+    
     return YES;
 }
 
