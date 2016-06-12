@@ -36,8 +36,8 @@ static inline void unLock()
     NSDate *lastAccessDate;
     dispatch_queue_t queue;
     
-    __unsafe_unretained _HYQueueItem *preItem;
-    __unsafe_unretained _HYQueueItem *nextItem;
+    _HYQueueItem *preItem;
+    _HYQueueItem *nextItem;
 }
 
 - (instancetype)initWithPriority:(NSInteger)priority;
