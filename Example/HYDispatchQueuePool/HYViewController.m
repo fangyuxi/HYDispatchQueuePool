@@ -20,10 +20,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    for (NSInteger index = 0; index < 1000; ++index) {
+    for (NSInteger index = 0; index < 100000; ++index) {
      
         dispatch_queue_t queue = [HYDispatchQueuePool queueWithPriority:DISPATCH_QUEUE_PRIORITY_HIGH];
-        
         dispatch_async(queue, ^{
             
             NSLog(@"%ld", index);

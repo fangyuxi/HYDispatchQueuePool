@@ -54,7 +54,7 @@ static inline void unLock()
         
         createDate = [NSDate date];
         lastAccessDate = createDate;
-        NSString *name = [NSString stringWithFormat:@"com.HYDispatchQueuePool.%@", createDate];
+        NSString *name = [NSString stringWithFormat:@"com.HYDispatchQueuePool.%lu", (unsigned long)[self hash]];
         key = name;
         queue = dispatch_queue_create([name UTF8String], DISPATCH_QUEUE_SERIAL);
         dispatch_set_target_queue(queue, dispatch_get_global_queue(priority, 0));
@@ -70,24 +70,14 @@ static inline void unLock()
 @interface _HYQueueItemLinkMap : NSObject //not thread-safe
 {
     @package
-    __unsafe_unretained _HYQueueItem *_head;
-    __unsafe_unretained _HYQueueItem *_tail;
-    __unsafe_unretained _HYQueueItem *_current;
+     _HYQueueItem *_head;
+     _HYQueueItem *_tail;
+     _HYQueueItem *_current;
     
     NSUInteger _queueCount;
-    
-    CFMutableDictionaryRef _itemsDic;
 }
 
 - (void)_insertItemAtHead:(_HYQueueItem *)item;
-
-- (void)_bringItemToHead:(_HYQueueItem *)item;
-
-- (void)_removeItem:(_HYQueueItem *)item;
-
-- (_HYQueueItem *)_removeTailItem;
-
-- (void)_removeAllItem;
 
 - (dispatch_queue_t) getQueue;
 
@@ -100,7 +90,6 @@ static inline void unLock()
     self = [super init];
     if (self)
     {
-        _itemsDic = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0,&kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
         _head = nil;
         _tail = nil;
         _current = nil;
@@ -113,7 +102,6 @@ static inline void unLock()
 
 - (void)_insertItemAtHead:(_HYQueueItem *)item
 {
-    CFDictionarySetValue(_itemsDic, (__bridge const void *)item->key, (__bridge const void *)item);
     if (_head)
     {
         _head->preItem = item;
@@ -133,77 +121,6 @@ static inline void unLock()
     _current = _head;
 }
 
-- (void)_bringItemToHead:(_HYQueueItem *)item
-{
-    if (_head == item) return;
-    
-    if (_tail == item)
-    {
-        _tail = item->preItem;
-        _tail->nextItem = nil;
-    }
-    else
-    {
-        item->nextItem->preItem = item->preItem;
-        item->preItem->nextItem = item->nextItem;
-    }
-    
-    item->nextItem = _head;
-    item->preItem = nil;
-    _head->preItem = item;
-    _head = item;
-    
-    _current = _head;
-}
-
-- (void)_removeItem:(_HYQueueItem *)item
-{
-    if (item->nextItem)
-        item->nextItem->preItem = item->preItem;
-    if (item->preItem)
-        item->preItem->nextItem = item->nextItem;
-    
-    if (_head == item)
-        _head = item->preItem;
-    if (_tail == item)
-        _tail = item->preItem;
-    
-    CFDictionaryRemoveValue(_itemsDic, (__bridge const void *)item->key);
-    
-    _queueCount -= 1;
-    _current = _head;
-}
-
-- (_HYQueueItem *)_removeTailItem
-{
-    _HYQueueItem *item = _tail;
-    if (_head == _tail)
-    {
-        _head = _tail = nil;
-    }
-    else
-    {
-        _tail = _tail->preItem;
-        _tail->nextItem = nil;
-    }
-    
-    CFDictionaryRemoveValue(_itemsDic, (__bridge const void *)_tail->key);
-    
-    _queueCount -= 1;
-    _current = _head;
-    
-    return item;
-}
-
-- (void)_removeAllItem
-{
-    _head = nil;
-    _tail = nil;
-    CFDictionaryRemoveAllValues(_itemsDic);
-    
-    _queueCount = 0;
-}
-
 - (dispatch_queue_t) getQueue
 {
     lock();
@@ -214,6 +131,11 @@ static inline void unLock()
     {
         _current = _head;
         item = _current;
+    }
+    else
+    {
+        _current = newOne;
+        item = newOne;
     }
     
     unLock();
