@@ -19,15 +19,17 @@
 {
     [super viewDidLoad];
     
-    for (NSInteger index = 0; index < 100000; ++index) {
+    for (NSInteger index = 0; index < 1000; ++index) {
      
-        dispatch_queue_t queue = [HYDispatchQueuePool queueWithPriority:DISPATCH_QUEUE_PRIORITY_HIGH];
-        dispatch_async(queue, ^{
-            
-            NSLog(@"%ld", index);
+        dispatch_async([HYDispatchQueuePool queueWithPriority:DISPATCH_QUEUE_PRIORITY_HIGH], ^{
+           
+            dispatch_queue_t queue = [HYDispatchQueuePool queueWithPriority:DISPATCH_QUEUE_PRIORITY_HIGH];
+            dispatch_async(queue, ^{
+                
+                NSLog(@"%ld", index);
+            });
         });
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
