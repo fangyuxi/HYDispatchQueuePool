@@ -28,6 +28,13 @@
 *  @return
 */
 
-+ (dispatch_queue_t) queueWithPriority:(NSInteger)priority;
++ (dispatch_queue_t)queueWithPriority:(NSInteger)priority;
+
+/**
+ *  @brief 判断是否在主队列中
+ *
+ *  @return bool
+ */
++ (BOOL)isMainQueue;
 
 @end

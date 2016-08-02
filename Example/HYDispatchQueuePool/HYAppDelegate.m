@@ -17,7 +17,7 @@
     self.window = window;
     
     HYViewController *controller = [[HYViewController alloc] init];
-    controller.title = @"HYCache Demo & BenckMark";
+    controller.title = @"HYDispatchQueuePool Demo";
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
     window.rootViewController = nav;
     
