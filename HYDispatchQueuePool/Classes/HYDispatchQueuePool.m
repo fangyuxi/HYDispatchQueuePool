@@ -249,6 +249,13 @@ static inline void unLock()
     lock();
     if (!_lowQueuePools) {
         _lowQueuePools = [[_HYQueueItemLinkMap alloc] init];
+        
+        NSUInteger activityProcesserCount = [[NSProcessInfo processInfo] activeProcessorCount];
+        for (NSUInteger index = 0; index < activityProcesserCount; ++index) {
+            
+            _HYQueueItem *item = [[_HYQueueItem alloc] initWithPriority:DISPATCH_QUEUE_PRIORITY_LOW];
+            [_lowQueuePools _insertItemAtHead:item];
+        }
     }
     unLock();
     return _lowQueuePools;
@@ -259,6 +266,9 @@ static inline void unLock()
     lock();
     if (!_backgroundQueuePools) {
         _backgroundQueuePools = [[_HYQueueItemLinkMap alloc] init];
+        
+        _HYQueueItem *item = [[_HYQueueItem alloc] initWithPriority:DISPATCH_QUEUE_PRIORITY_BACKGROUND];
+        [_lowQueuePools _insertItemAtHead:item];
     }
     unLock();
     return _backgroundQueuePools;
